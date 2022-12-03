@@ -1,18 +1,16 @@
-#include <stdio.h>
-
-int main() 
+#include <stdio.h> 
+int main()
 {
-   int n;
-   scanf("%d", &n);
-   for (int i = n; i >= 1; --i) 
-   {
-        for (int j = 1; j <= i; ++j) 
+    int n,i, j;
+    scanf("%d",&n);
+    for(i=n;i>=1;i--)
+    {
+        for(j=1;j<=i;j++)
         {
-            printf("%d", j);
+            printf("%c ",'A'-1 + i);
         }
         printf("
 ");
-   }
-   return 0;
+    }
+    return 0;
 }
-
