@@ -1,16 +1,20 @@
-#include <stdio.h> 
-int main()
-{
-    int n,i, j;
-    scanf("%d",&n);
-    for(i=n;i>=1;i--)
-    {
-        for(j=1;j<=i;j++)
-        {
-            printf("%c ",'A'-1 + i);
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    int row, col;
+    for (row = 0; row < N; row++) {
+        for (col = 0; col < N; col++) {
+            if (col == row)
+                printf("0");
+            else
+                printf("x");
         }
         printf("
 ");
     }
+
     return 0;
 }
