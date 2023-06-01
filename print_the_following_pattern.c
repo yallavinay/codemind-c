@@ -4,14 +4,21 @@ int main() {
     int N;
     scanf("%d", &N);
 
-    int row, col;
-    for (row = 0; row < N; row++) {
-        for (col = 0; col < N; col++) {
-            if (col == row)
-                printf("0");
-            else
-                printf("x");
+    int row, col, spaces, digits;
+    for (row = 1; row <= N; row++) {
+        spaces = N - row;
+        digits = 2 * row - 1;
+
+        // Print spaces
+        for (col = 1; col <= spaces; col++) {
+            printf(" ");
         }
+
+        // Print digits
+        for (col = 1; col <= digits; col++) {
+            printf("%d", row);
+        }
+
         printf("
 ");
     }
